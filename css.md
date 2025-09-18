@@ -616,3 +616,112 @@ height & min-height
 - `border-radius` 속성은 요소의 모서리를 둥글게 만들기 위한 속성이다.
 - 형태
     - `[크기]`
+
+## cursor
+- `cursor` 속성은 마우스 포인터 모양을 지정하기 위한 속성이다.
+- 형태
+    - `auto` : 기본 값으로, 브라우저가 상황에 맞게 알아서 판단한다.
+    - `none` : 마우스 포인터 없음
+    - `default` : 화살촉 모양. 기본 값이 아니다.
+    - `pointer` : 손가락 모양.
+    - `wait` : 모래시계 모양.
+    - `text` : I 모양.
+    - `move` : 십자 화살표 모양.
+    - `not-allowed` : 금지표 모양.
+    - `zoom-in` : 돋보기 + 모양.
+    - `zoom-out` : 돋보기 - 모양.
+    - 모양은 `https://developer.mozilla.org/ko/docs/Web/CSS/cursor` 주소에서 확인
+
+ ## pointer-events
+ - `pointer-events` 속성은 마우스 포인터롸 요소간의 상호작용에 관한 설정을 위한 속성이다.
+ - 형태
+    - `auto` : 기본 값으로, 상호작용 가능.
+    - `none` : 상호작용 불가능.
+
+## user-select
+- `user-select` 속성은 사용자의 텍스트 선탣에 대한 설정을 위한 속성이다.
+- 형태
+    - `auto` : 기본 값으로, 브라우저가 상황에 따라 알아서 판단한다.
+    - `all` : 요소의 내용이 한 번에 선택된다.
+    - `none` : 요소의 내용을 선택할 수 없음. (버튼)
+    - `text` : 요소의 내용을 일반적으로 선택할 수 있음.
+
+## transition-duration
+- `transition-duration` 속성은 해당 요소에 특정 상황에 따라 변화하는 속성에 대해 해당 속성이 *변화* 하는데 걸리는 시간을 지정하기 위한 속성이다.
+- 중간 값이 없는 속성은 트랜지션 효과의 적용을 받지 않음에 유의한다. (예를 들어 display 값 변화는 중간 값이 없어서 적용 안됨)
+- 형태
+    - `[시간]` `ms/s`
+(글자를 서서히 나타내고 싶을 때 opacity())
+
+## transition-delay
+- `transition-delay` 속성은 트랜지션 발생 *시작* 까지 지연시킬 시간을지정한다.
+- 형태
+    - `[시간]`
+
+## transition-property
+- `transition-property` 속성은 트랜지션의 적용을 받을 CSS 속성을 지정하기 위한 속성이다.
+- 해당 속성에 명시되지 않은 CSS 속성은 트앤지션의 효과를 적용받지 않는다.
+    - `all` : 기본 값으로. 모든 적용 가능한 속성에 트랜지션을 적용한다.
+    - `none` : 트랜지션을 적용하지 않는다.
+    - `[속성 이름,...]`
+
+## transition-timing-function
+- `transition-timing-function` 속성은 트랜지션이 적용되는데 있어, 시간의 흐름에 따른 변화 완료율을 계산하는 함수를 지정하기 위한 속성이다.
+- 형태
+    - `ease` : 기본 값
+    - `ease-in`
+    - `ease-in-out`
+    - `ease-out`
+    - `linear`
+    - `[cubic-bezier 함수]`
+    - 함수는 `https://cubic-bezier.com/#0,0,1,1` 주소에서 참고
+
+# [flex]
+- 플렉스 컨테이너는 이가 가지는 자식 요소들에 대한 배치를 보다 유연하고 쉽게하기 위해 사용된다.
+- 플렉스 컨테이너가 될 요소의 `display` 속성 값은 `flex` 혹은 `inline-flex` 로 설정한다.
+
+# 플렉스 컨테이너(부모)
+## align-items
+- `align-items` 속성은 플렉스 컨테이너의 `flex-directions` 에서 설정한 방향에 대해 *수직한 방향* 으로의 정렬을 위한 속성이다.
+- 형태
+    - `flex-start`: 흐름의 시작 방향에 맞추어 정렬
+    - `flex-end` : 흐름의 끝 방향에 맞추어 정렬 (요소의 순서가 반전되지 않는다.)
+    - `center` : 가운데 정렬
+    - `stretch` : `flex-direction` 에 수직한 방향으로의 플렉스 컨테이너의 크기에 맞게 늘이거나 줄이도록 정렬.
+    - `space-between` : 각 플렉스 아이템 사이에 균등한 공간을 배분하도록 정렬.
+    - `space-around` : 각 플렉스 아이템 사이에 균등한 공간을 배분하고,각 끝 외부에 각 플렉스 아이템 사이의 공간의 절반에 해당하는 공간을 배분하도록 정렬.
+    - `space-evenly` : 각 플렉스 아이템 사이 및 각 끝 외부에 균등한 공간을 배분하도록 정렬.
+
+## flex-direction
+- `flex-direction` 속성은 플렉스 컨테이너에 부여하는 속성으로, 이가 가지고있는 플렉스 아이템들의 흐름 방향을 지정하기 위해 사용한다.
+- 형태
+    - `column` : 세로 방향 배치.
+    - `column-reverse` : 세로 역방향 배치. 요소의 순서도 반전된다.
+    - `row` : 가로 방향 배치.(기본값)
+    - `row-reverse` : 가로 역방향 배치. 요소의 순서도 반전된다.
+
+## justify-content
+- `justify-content` 속성은 플렉스 컨테이너의 `flex-direction` 에서 설정한 방향에 대해 *수평한 방향* 으로의 정렬을 위한 속성이다.
+- 형태
+    - `flex-start`: 흐름의 시작 방향에 맞추어 정렬
+    - `flex-end` : 흐름의 끝 방향에 맞추어 정렬 (요소의 순서가 반전되지 않는다.)
+    - `center` : 가운데 정렬
+    - `space-between` : 각 플렉스 아이템 사이에 균등한 공간을 배분하도록 정렬.
+    - `space-around` : 각 플렉스 아이템 사이에 균등한 공간을 배분하고,각 끝 외부에 각 플렉스 아이템 사이의 공간의 절반에 해당하는 공간을 배분하도록 정렬.
+    - `space-evenly` : 각 플렉스 아이템 사이 및 각 끝 외부에 균등한 공간을 배분하도록 정렬.
+
+# 플렉스 아이템(자식)
+## align-self
+- `align-self` 속성은 부모인 플렉스 컨테이너의 `flex-direction` 속성에 대해 스스로의 수직한 방향으로의 정렬을 설정하기 위한 속성이다.
+- 그 형태는 `align-items`와 같다.
+
+## flex-basis
+- `flex-basis` 속성은 플렉스 아이템의 (기본)크기를 설정하기 위해 사용하는 속성이다. 부모인 플렉스 컨테이너의 `flex-direction` 속성 값이 `row`나 `row-reverse`일 경우 이는 `width`와 같고, `column` 이나 `column-reverse`일 경우 이는 `height`와 같다.
+- 형태
+    - `auto`
+    - `[크기]`
+
+## flex-grow
+- `flex-grow` 속성은 플렉스 아이템이 플렉스 컨테이너 안에서 `flex-direction` 방향에 따라 남는 여유 공간을 차지하기 위해 늘어날 비율을 지정한다. 단, 값이 `0` 이면 늘어나지 않는다.
+- 형태
+    - `[0|자연수]` : 기본 값 `0`
