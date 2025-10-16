@@ -779,9 +779,9 @@ Object.values(countryMap).sort();
       </div>
       insertAdjacentEelement(afterend, x)
       ```
-        - `querySelector(x)` : 호출 대상이 되는 요소의 자식 혹은 자손이면서 CSS 선택자인 문자열 `x` 를 가장 빨리 만족하는 요소 한 개를 반환한다. 그러한 요소가 없다면 `null`
+    - `querySelector(x)` : 호출 대상이 되는 요소의 자식 혹은 자손이면서 CSS 선택자인 문자열 `x` 를 가장 빨리 만족하는 요소 한 개를 반환한다. 그러한 요소가 없다면 `null`
           을 반환한다.
-        - `querySelectorAll(x)` : 호출 대상이 되는 요소의 자식 혹은 자손이면서 CSS 선택자인 문자열 `x` 를 만족하는 요소 전체를 인자로 가지는 유사 배열 객체 `NodeList` 를
+    - `querySelectorAll(x)` : 호출 대상이 되는 요소의 자식 혹은 자손이면서 CSS 선택자인 문자열 `x` 를 만족하는 요소 전체를 인자로 가지는 유사 배열 객체 `NodeList` 를
           반환한다. 그러한 요소가 없다면 길이가 `0` 인 유사 배열 객체 `NodeList` 를 반환한다.
         - (차이점 : document.getElementById() 와는 다르게 document.body.querySelector()(= Element.querySelector())처럼 원하는 범위에 사용
           가능하다)
