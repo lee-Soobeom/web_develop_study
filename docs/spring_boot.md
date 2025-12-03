@@ -2,7 +2,7 @@
 
 ### 프로젝트 설정
 
-<img src="../../images/springbootsetting.png">
+<img src="../docs/imgs/springbootsetting.png">
 
 - `Name`: 프로젝트 이름
 - `Location`: 프로젝트가 생성될 위치
@@ -18,7 +18,7 @@
 
 ### 프로젝트 의존성 설정
 
-<img src="../../images/developertoolssettings.png">
+<img src="../docs/imgs/developertoolssettings.png">
 
 - `Developer Tools`
     - `Lombok`: 어노테이션 기반 코드 자동완성 및 속성 부여를 위한 의존성.
@@ -91,7 +91,7 @@
 
 # 웹
 
-<img src="../../images/structure.png">
+<img src="../docs/imgs/structure.png">
 
 ## MVC
 
